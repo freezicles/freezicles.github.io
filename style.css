@@ -15,7 +15,7 @@ body {
     color: black;
     font-family: "Roboto";
     opacity: 0.2;
-    animation: start 0.5s ease-out forwards, float 2s ease-in-out infinite;
+    animation: start 0.5s ease-out forwards;
     padding: 20px;
 }
 @keyframes start {
