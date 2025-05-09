@@ -1,0 +1,41 @@
+.txt {
+    display: inline-block;
+    font-family: "Cascadia Code";
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 2, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: yeah 2s linear infinite;
+    margin:0;
+    border:0;
+    padding:0;
+    
+}
+button {
+    background-color: white;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-family: "Cascadia Code", monospace;
+    cursor: pointer;
+}
+.cool {
+    display:inline-block;
+    color: red;
+    font-family: comic sans ms;
+    outline: solid red;
+}
+body {
+    background-color: black;
+}
+@keyframes yeah {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
