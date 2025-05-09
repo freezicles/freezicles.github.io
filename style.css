@@ -17,6 +17,31 @@ body {
     opacity: 0.2;
     animation: start 0.5s ease-out forwards;
     padding: 20px;
+    font-size: 1.2rem;
+}
+#btn {
+    position: absolute;
+    font-family: "Roboto";
+    border: none;
+    border-radius: 24px;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    background-size: 400%;
+    z-index: 0;
+    cursor: pointer;
+}
+#btn::before {
+    content: '';
+    background: linear-gradient(45deg, aliceblue, lightblue);
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 24px;
+    width: 200px;
+    height: 50px;
+    background-size: 300%;
+    animation: glowing 10s linear infinite;
+    z-index: -1;
 }
 @keyframes start {
     to {
@@ -26,11 +51,17 @@ body {
         box-shadow: 0 0 100px rgba(1, 119, 253, 0.3);
     }
 }
-@keyframes float {
+
+@keyframes hover {
+    to {
+        color: hsl(0, 0%, 20%);
+    }
+}
+@keyframes glowing {
     0%, 100% {
-        transform: translateY(0);
+        background-position: 0% 0%;
     }
     50% {
-        transform: translateY(-20px);
+        background-position: 100% 0%;
     }
 }
