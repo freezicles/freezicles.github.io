@@ -64,12 +64,17 @@
     display: inline-block;
     background: linear-gradient(45deg, red, yellow);
     background-size: 400% 400%;
-    border: 2px solid black;
+    border: none;
     color: white;
     animation: shine 5s ease-in-out infinite;
     font-family: "Cascadia Code";
     height: 40px;
     width: 100px;
+    transition: transform 0.2s ease;
+}
+.topbar-button:hover {
+    transform: scale(1.2);
+    border: 2px solid white;
 }
 
 .utg-video {
@@ -79,8 +84,17 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -99;
+    z-index: 0;
     filter: blur(10px);
+}
+.utg-video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+    overflow: hidden;
 }
 .utg-video-wrapper::after {
     content: '';
@@ -92,7 +106,22 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
 }
-p, h1, h2, h3 {
+.box {
+    padding: 20px;
+    padding-top: 1px;
+    margin-top: 200px;
+    width: 350px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    border-bottom: 5px solid gray;
+    border-radius: 15px;
+    z-index: 2;
+}
+.big-text {
+    font-size: 25px;
+}
+p, h1, h2, h3, li {
     font-family: "Cascadia Code";
 }
 body {
