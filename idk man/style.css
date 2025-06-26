@@ -1,0 +1,141 @@
+.topbar {
+    margin-top: 30px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 10%;
+    border-radius: 15px;
+    background-color: rgba(5, 5, 5, 0.8);
+    background-size: 200% 200%;
+    backdrop-filter: blur(2px);
+    border-bottom: 5px solid gray;
+    color: white;
+    font-family: "Cascadia Code";
+    z-index: 99;
+}
+.topbar-right {
+    margin-right: 7px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.topbar-left {
+    margin-left: 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.topbar-right > * {
+    margin: 7px;
+    box-sizing: border-box;
+}
+
+.topbar-left > * {
+    margin: 7px;
+    box-sizing: border-box;
+}
+
+.gradient-text {
+    display: inline-block;
+    background: linear-gradient(270deg, white, #0a9aff, white);
+    background-size: 200% 200%;
+    animation: shine 5s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pfp {
+    border-radius: 20px;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.topbar-button {
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-block;
+    background: linear-gradient(45deg, red, yellow);
+    background-size: 400% 400%;
+    border: none;
+    color: white;
+    animation: shine 5s ease-in-out infinite;
+    font-family: "Cascadia Code";
+    height: 40px;
+    width: 100px;
+    transition: transform 0.2s ease;
+}
+.topbar-button:hover {
+    transform: scale(1.2);
+    border: 2px solid white;
+}
+
+.utg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    filter: blur(10px);
+}
+.utg-video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+    overflow: hidden;
+}
+.utg-video-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.box {
+    padding: 20px;
+    padding-top: 1px;
+    margin-top: 200px;
+    width: 350px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    border-bottom: 5px solid gray;
+    border-radius: 15px;
+    z-index: 2;
+}
+.big-text {
+    font-size: 25px;
+}
+p, h1, h2, h3, li {
+    font-family: "Cascadia Code";
+}
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes shine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
