@@ -1,7 +1,7 @@
 const cursor = document.getElementById('cursor');
 let mouseX = 0, mouseY = 0;
 let posX = 0, posY = 0;
-const speed = 0.25;
+const speed = 0.15;
 
 document.addEventListener('mousemove', e => {
   mouseX = e.clientX;
