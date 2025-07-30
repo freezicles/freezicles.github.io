@@ -1,0 +1,29 @@
+#image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    animation: slideFade 0.5s ease-out;
+}
+.title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    color: #333;
+    animation: slideFade 0.5s ease-out;
+}
+@keyframes slideFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

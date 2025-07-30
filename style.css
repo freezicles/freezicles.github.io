@@ -1,16 +1,105 @@
-#cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    background-color: #001f33;
+}
+.topbar {
+    display: flex;
+    width: 95vw;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: linear-gradient(to right, rgba(10, 154, 255, 0.3), rgba(0, 89, 153, 0.3));
+    border-radius: 20px;
+    height: clamp(30px, 20vh, 85px);
+    border: 2px solid #0a9aff;
+    box-shadow: 0 0 25px #00000073;
+    align-content: center;
+    backdrop-filter: blur(5px);
+    animation: slideFade 0.5s ease-out;
+    
+}
+.topbar-left {
+    display: flex;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2%;
+    gap: 20px;
+}
+.topbar-right {
+    display: flex;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    gap: 20px;
+}
+.pfp {
+    height: 75%;    
+    border-radius: 100%;
+    border: 2px solid #0a9aff;
+    box-shadow: 0 0 10px rgba(10, 154, 255, 0.5);
+    animation: slideFade 0.5s ease-out;
+    
+}
+.icon {
+    width: 40px;
+    border-radius: 25%;
+    padding: 5px;
+    transition: filter 0.3s ease-in-out, transform 0.1s ease-in-out;
+    filter: grayscale(100%) contrast(300%) brightness(110%) invert(1);
+    
+    border: 2px solid #0a9aff;
+    box-shadow: 0 0 10px rgba(10, 154, 255, 0.5);
+    animation: slideFade 0.5s ease-out;
+}
+.icon:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.dc {
+    filter: grayscale(100%) contrast(300%) brightness(20%) invert(1);
+    border: 2px solid #533dce;
+}
+.yt {
+    border: 2px solid #ff0000;
+}
+.gh {
+    border: 2px solid black;
+    box-shadow: 0 0 0 2px white;
+}
+.gh:hover {
+    filter: none;
+}
+@keyframes slideFade {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-html, body {
-    height: 100%;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(13, 77, 167);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease-out;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(10, 154, 255, 0.5);
+    animation: slideFade 0.5s ease-out;
 }
-
-* {
-    cursor: none;
+.button:hover {
+    background-color: #36a9fb;
+    transform: scale(1.05);
 }
