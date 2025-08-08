@@ -1,9 +1,14 @@
 window.pulse = {
-  play: function(textId, audioId, minScale = 1, maxScale = 1.5) {
+  play: function(audioId, minScale = 1, maxScale = 1.5) {
     const audio = document.getElementById(audioId);
-    const textEl = document.getElementById(textId);
-    if (!audio || !textEl) {
-      console.warn("Audio or text element not found");
+    if (!audio) {
+      console.warn("Audio element not found");
+      return;
+    }
+
+    const textElements = Array.from(document.querySelectorAll(".pulse"));
+    if (textElements.length === 0) {
+      console.warn("No elements with class 'pulse' found");
       return;
     }
 
@@ -20,12 +25,12 @@ window.pulse = {
       requestAnimationFrame(animate);
       analyser.getByteFrequencyData(freqData);
       const avg = freqData.reduce((a, b) => a + b, 0) / freqData.length;
-
-      // Map avg (0-255) to scale (minScale - maxScale)
       const norm = avg / 255;
       const scale = minScale + (maxScale - minScale) * norm;
 
-      textEl.style.transform = `scale(${scale})`;
+      textElements.forEach(el => {
+        el.style.transform = `scale(${scale})`;
+      });
     }
 
     audio.onplay = () => {
