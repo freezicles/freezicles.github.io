@@ -1,21 +1,58 @@
 <!DOCTYPE html>
-<div id="particles-js"></div>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>freezicles</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://freezicles.github.io/pulse.js"></script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+    
+    body {
+      background: linear-gradient(to bottom, #ffffff, #a5dcff); /* lighter ice gradient */
+      color: #001f3f; /* dark blue for contrast */
+      height: 100vh;
+    }
+    
+    @keyframes in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    * {
+      animation: in 0.6s ease forwards;
+    }
+    .main-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 25%;
+      transition: transform 0.5s ease;
+    }
+    .main-image:hover {
+      transform: scale(1.1);
+    }
+    .sign {
+      text-align: center;
+      border: 5px dashed #000000;
+      padding: 1% 0;
+      width: 30%;
+      background-color: #fff000;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.4);
+      transform: translateY(-50px) rotate(-5deg);
+      transition: transform 0.5s ease;
+      transform-origin: 50% 50%;
+    }
+    .sign:hover {
+      transform: translateY(-50px) rotate(5deg);
+    }
+  </style>
 </head>
 <body>
-  <div class="topbar"></div>
-  <div class="title-container">
-    <h3 class="title rainbow">hi, i'm&nbsp;</h3>
-    <h3 class="rainbow type">freezicles</h3>
-    <div class="rainbow typeline"></div>
+  <img src="Artboard 1@4x.png" class="main-image pulse">
+  <div class="sign pulse">
+    <h1>Page Under Construction</h1>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
