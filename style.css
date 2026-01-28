@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at center, #111 0%, #000 70%);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.background-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 4vw;      /* adjust size of characters */
+    line-height: 1.2;
+    color: rgba(255,255,255,0.03); /* super faint */
+    white-space: normal;  /* allows wrapping */
+    word-wrap: break-word; /* breaks long sequences */
+    overflow: hidden;
+    pointer-events: none; /* clicks pass through */
+
+    /* diagonal drift */
+    animation: driftAndRotate 4s ease-in-out alternate infinite;
+}
+
+@keyframes driftAndRotate {
+    0%   { transform: scale(1)}
+    100%  { transform: scale(1.3)}
+}
+
+.flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    opacity: 0;
+    pointer-events: none;
+    animation: flashAnim 1s linear infinite;
+    z-index: 9999;
+}
+
+@keyframes flashAnim {
+    0%   { opacity: 0.07; }
+    100% { opacity: 0; }
+}
+
+.countdown {
+    font-size: 5vw;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2),
+                 0 0 20px rgba(255,255,255,0.15),
+                 0 0 40px rgba(255,255,255,0.1);
+    animation: pulse 2s infinite ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 1; }
+}
+
+.rajdhani-medium {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.background-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulseCircle 2s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes pulseCircle {
+    0% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 0.4; }
+}
+
+
+/* mobile / small screens */
+@media (max-width: 768px) {
+    .background-text {
+        font-size: 8vw; /* double size on phones */
+    }
+
+    .countdown {
+        font-size: 10vw; /* bigger countdown numbers */
+        letter-spacing: 0.25em;
+    }
+
+    .background-circle {
+        width: 300px;
+        height: 300px;
+        filter: blur(80px);
+    }
+}
