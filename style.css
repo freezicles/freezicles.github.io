@@ -4,7 +4,7 @@ body {
     font-family: "Jetbrains Mono", sans-serif;
     margin: 0;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: clamp(20px, 3.5vw, 75px);
     
     color: white;
     overflow: hidden;
@@ -21,10 +21,10 @@ body {
 }
 
 .links {
-    font-size: clamp(10px, 2.5vw, 20px);
+    font-size: clamp(8px, 2.5vw, 25px);
 }
 .links_contact {
-    font-size: clamp(10px, 2.5vw, 20px);
+    font-size: clamp(8px, 2.5vw, 25px);
 }
 
 .link {
@@ -55,11 +55,11 @@ body {
 
 
 .contact {
-    font-size: 0.5em;
+    font-size: clamp(8px, 2.5vw, 25px);
 }
 
 hr {
-    width: 50vw;
+    width: 40vw;
     color: white;
     margin: 15px;
 }
