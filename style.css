@@ -1,65 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-    font-family: "Jetbrains Mono", sans-serif;
-    margin: 0;
-    font-weight: 300;
-    font-size: clamp(20px, 3.5vw, 75px);
-    
-    color: white;
-    overflow: hidden;
+* {
+    font-family: "Jost";
+    margin: 0px;
 }
 
+h1 { font-size: 3em; margin: 0;}
+p {
+    font-size: 1.6em;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+body {
+    background: linear-gradient(0deg, #abdcff, #0a9aff);
+    margin: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
 .site {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000030;
-    height: 100vh;
-    width: 100vw;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
 }
 
-.links {
-    font-size: clamp(8px, 2.5vw, 25px);
-}
-.links_contact {
-    font-size: clamp(8px, 2.5vw, 25px);
+.bg {
+    display: flex;
+    flex-direction: column;
+    background-color: #abdcff;
+    padding: 40px;
+    opacity: 0.8;
+    border-radius: 40px;
+    width: 40%;
 }
 
-.link {
-    display: inline-block;
+.romania-text {
+    display: inline-flex;
+    font-weight: bold;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 5px;
     text-decoration: none;
-    color: lightskyblue;
-    transition: 0.2s ease-out;
-    padding-bottom: 0.2em
+    color: black;
+    line-height: 1.5;
+    transition: transform 0.1s ease-in;
+}
+.romania-text:hover { transform: scale(0.95); }
+
+@media (max-width: 768px) {
+    * {
+        font-size: 13px;
+    }
+    .site {
+        padding-top: 20%;
+    }
+    .bg {
+        width: 60%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
 }
 
-.link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1.5px;
-    width: 0;
-    background: lightskyblue;
-    transition: width 240ms ease-out;
+.flag {
+    width: 20px;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    padding-right: 3px;
 }
 
-.link:hover::after {
-    width: 100%;
-}
-.link:hover {
-    transform: scale(1.1);
-}
-
-
-.contact {
-    font-size: clamp(8px, 2.5vw, 25px);
+.subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 hr {
-    width: 40vw;
-    color: white;
-    margin: 15px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 20px 0px 20px 0px;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    flex-wrap: wrap;
+}
+.link {
+    text-decoration: none;
+    color: blue;
+    font-size: 1em;
+    transition: transform 0.1s ease-out;
+}
+
+.link:hover {
+    transform: scale(1.1);
 }
