@@ -83,7 +83,7 @@ hr {
     text-decoration: none;
     color: blue;
     font-size: 1em;
-    transition: transform 0.1s ease-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 .link:hover {
