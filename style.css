@@ -1,109 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
-    font-family: "Jost";
-    margin: 0px;
+    font-family: "Consolas", monospace;
+    color: #eeeeee;
+    font-size: 1.05em;
+    line-height: 1.6em;
 }
 
-h1 { font-size: 3em; margin: 0;}
-p {
-    font-size: 1.6em;
-    padding-right: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-html {
-   overscroll-behavior-y: none;
-}
-
-
-body {
-    overscroll-behavior: none;
-    background: linear-gradient(0deg, #c7e8ff, #0a9aff);
-    margin: 0;
-    min-height: 100vh;
-    
-}
 .site {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-.bg {
-    display: flex;
     flex-direction: column;
-    background: rgba(171, 220, 255, 0.4);
-    padding: 40px;
-    border-radius: 40px;
-    width: 40%;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    z-index: 999;
+    background: #100022;
+    width: 100vw;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
-@media (max-width: 768px) {
-    * {
-        font-size: 13px;
-    }
-    .site {
-        padding-top: 20%;
-    }
-    .bg {
-        width: 60%;
-    }
-    h1 {
-        font-size: 2.5em;
-    }
+body {
+    margin: 0
 }
+
+p, h1 {
+    text-align: center;
+    width: 50vw
+}
+
 hr {
-    width: 100%;
-    border: 1px solid black;
-    margin: 20px 0px 20px 0px;
-    align-items: center;
+    width: 50vw;
+    border: 2px dashed;
+    margin: 25px;
 }
 
-.links {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6em;
-    flex-wrap: wrap;
-}
-.link {
-    text-decoration: none;
-    color: blue;
-    font-size: 1em;
-    transition: transform 0.1s ease-in-out;
-}
-
-.link:hover {
-    transform: scale(1.1);
-}
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-
-}
-    
-
-.secret {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    height: 25px;
-    opacity: 0.7;
+a {
+    color: lightskyblue
 }
